@@ -1,0 +1,8 @@
+.MainContainer {
+    width: 50%;
+}
+
+.MenuCardsContainer {
+    display: flex;
+    justify-content: center;
+}

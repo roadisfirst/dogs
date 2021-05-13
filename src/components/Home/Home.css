@@ -1,0 +1,17 @@
+.homePic {
+    /* background-color: ; */
+    /* position: absolute; */
+    /* width: 50%; */
+    top: 30px;
+    left: 30px;
+    
+}
+
+.homeContainer {
+    background-color: #FBE0DC;
+    margin: 30px;
+    border-radius: 20px;
+    /* position: relative; */
+    width: 50%;
+    height: 100vh;
+}

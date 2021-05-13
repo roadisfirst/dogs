@@ -1,0 +1,26 @@
+.Form {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid grey; */
+    padding: 2px;
+}
+
+.Input {
+    flex-grow: 2;
+    border: none;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 0;
+}
+
+.Input:focus {
+    outline: none;
+}
+
+.Button {
+    border: 1px solid #FBE0DC;
+    background-color: #FBE0DC;
+    color: #FF868E;
+}

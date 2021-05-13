@@ -1,29 +1,24 @@
 import React from 'react';
-import Layout from './components/Layout/Layout';
-// import Classes from 
-import './App.css';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-function App() {
+import Layout from './hoc/Layout/Layout';
+import Home from './components/Home/Home';
+
+import classes from './App.css';
+import MainMenu from './containers/MainMenu/MainMenu';
+import Breeds from './containers/Breeds/Breeds';
+
+const App = () => {
   return (
-    <div className="App">
-      <Layout>
-        <p>Test</p>
-      </Layout>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+      <div className={classes.App}>
+        <Layout>
+          <MainMenu />
+          <Switch>
+            <Route path="/pet-breeds" exact component={Breeds} />
+            <Route path="/" component={Home} />
+          </Switch>
+          </Layout>
+      </div>
   );
 }
 

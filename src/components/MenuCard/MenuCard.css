@@ -1,0 +1,44 @@
+.MenuCard {
+    width: 138px;
+    height: 244px;
+    margin: 10px 8px;
+}
+
+.Vote {
+    background-color: #B4B7FF;
+    margin-bottom: 1rem;
+}
+
+.Breeds {
+    background-color: #97EAB9;
+    margin-bottom: 1rem;
+    
+}
+
+.Search {
+    background-color: #FFD280;
+    margin-bottom: 1rem;
+}
+
+.Button {
+    display: flex;
+    background: white;
+    color: #FF868E;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    justify-content: center;
+}
+
+a:hover {
+    background: #FBE0DC;
+    color: #FF868E;
+}
+
+.ButtonActive {
+    background: #FF868E;
+    color: white;
+}

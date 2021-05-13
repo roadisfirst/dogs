@@ -1,0 +1,7 @@
+export const GET_BREEDS = 'GET_BREEDS';
+export const GET_BREEDS_SUCCESS = 'GET_BREEDS_SUCCESS';
+export const GET_BREEDS_FAIL = 'GET_BREEDS_FAIL';
+
+export const GET_BREED = 'GET_BREED';
+export const GET_BREED_SUCCESS = 'GET_BREED_SUCCESS';
+export const GET_BREED_FAIL = 'GET_BREED_FAIL';
