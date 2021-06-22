@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect, useSelector, useDispatch} from 'react-redux';
-import { Route } from 'react-router-dom';
 
 import BreedCard from '../../components/BreedCard/BreedCard';
-import Breed from './Breed/Breed';
-import Filter from '../../components/Filter/Filter';
+import Search from '../../components/Dashboard/Dashboard';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import axios from '../../axios-breeds';
 import * as actions from '../../store/actions/index';
 import { render } from 'react-dom';
+
+import classes from './Breeds.css';
 
 const Breeds = ({dispatch, loading, breeds, hasErrors}) => {
     useEffect(() => {
@@ -18,21 +18,24 @@ const Breeds = ({dispatch, loading, breeds, hasErrors}) => {
     const renderBreeds = () => {
         if (loading) return <p>Loading...</p>
         if (hasErrors) return <p>Unable to display breeds.</p>
-        return breeds.slice(0, 4).map((breed) => 
+
+
+        return breeds.slice(0, 10).map((breed) =>
+
             <BreedCard 
                 key={breed.id} 
                 name={breed.name}
-                img={breed.image} />)
+                img={breed.image}
+                clicked={`/pet-breeds/${breed.id}`} />)
     }
 
     return (
-        <section>
+        <section className={classes.BreedsContainer}>
             <h2>Breeds</h2>
-            <p>Breeds will be here</p>
-            <Filter />
-            {renderBreeds()}
-        
-        {/* <Route path={props.match.url + "/:id"} exact component={Breed} /> */}
+            <Search />
+            <div className={classes.CardsContainer}>
+                {renderBreeds()}
+            </div>
         </section>
     )
 }

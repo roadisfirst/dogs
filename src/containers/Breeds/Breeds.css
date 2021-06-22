@@ -1,0 +1,10 @@
+.BreedsContainer {
+    width: 50%;
+}
+
+.CardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    width: 100%;
+}

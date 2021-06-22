@@ -1,0 +1,45 @@
+.SingleBreed {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+.About {
+    border: 2px solid #FBE0DC;
+    border-radius: 20px;
+    margin: 0 20px 75px;
+}
+
+.AboutWrapper {
+    display: flex;
+    gap: 20px;
+    padding: 0px 40px 40px;
+}
+
+.AboutItem {
+    width: 50%;
+    text-align: start;
+}
+
+.BreedImg {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 20px 50px;
+}
+
+.BreedTitle {
+    display: inline;
+    position: relative;
+    z-index: 5;
+    top: -30px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.BreedPurpose {
+    margin: 0;
+}
