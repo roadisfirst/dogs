@@ -1,18 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import Form from '../UI/Form/Form';
-import Button from '../UI/Button/Button';
-
-const filter = () => {
+const filter = (props) => {
     return (
-        <Fragment>
-            <Form />
-            <Button>Liked</Button>
-            <Button>Favourite</Button>
-            <Button>Disliked</Button>
-        </Fragment>
-    )
-    
-};
+        <select>
+            
+        </select>
+    );
+}
 
 export default filter;
