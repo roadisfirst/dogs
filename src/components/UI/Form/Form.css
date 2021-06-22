@@ -1,18 +1,16 @@
 .Form {
     display: flex;
     flex-direction: row;
-    /* border: 1px solid grey; */
     padding: 2px;
+    width: 70%;
+    justify-content: center;
 }
 
 .Input {
     flex-grow: 2;
     border: none;
     padding: 1rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 0;
+    border-radius: 1rem;
 }
 
 .Input:focus {
@@ -23,4 +21,16 @@
     border: 1px solid #FBE0DC;
     background-color: #FBE0DC;
     color: #FF868E;
+    border-radius: 10px;
+    position: relative;
+    left: -50px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+.SearchItemImg {
+    width: 20px;
+    height: auto;
 }
