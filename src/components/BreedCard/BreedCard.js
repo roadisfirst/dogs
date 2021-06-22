@@ -1,19 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import classes from './BreedCard.css';
 
 const breedCard = (props) => {
-    console.log(props.image)
     return (
-        <div className={classes.CardsContainer}>
-            <article className={classes.BreedCard} onClick={props.clicked}>
-            <h2>{props.name}</h2>
-            <div className="Info">
-                
-                <img />
-            </div>
+        <NavLink to={props.clicked}>
+            <article className={classes.BreedCard}>
+                <div className={classes.Info}>
+                    <img src={props.img.url} alt={props.name}/>
+                    <h3>{props.name}</h3>
+                </div>
             </article>
-        </div>
+        </NavLink>
     )
 };
 
