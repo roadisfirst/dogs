@@ -7,8 +7,6 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-
-    console.log(action);
     switch(action.type){
         case actionTypes.GET_BREED:
             return {
@@ -21,14 +19,14 @@ const reducer = (state = initialState, action) => {
                 loading: false,
                 hasErrors: false
             };
-            case actionTypes.GET_BREED_FAIL:
-        return {
-            ...state,
-            loading: false,
-            hasErrors: true
-        };
+        case actionTypes.GET_BREED_FAIL:
+            return {
+                ...state,
+                loading: false,
+                hasErrors: true
+            };
+        default: return state;
     }
-    return state;
 };
 
 export default reducer;

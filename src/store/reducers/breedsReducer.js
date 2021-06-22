@@ -21,14 +21,15 @@ const reducer = (state = initialState, action) => {
                 loading: false,
                 hasErrors: false
             };
-            case actionTypes.GET_BREEDS_FAIL:
-        return {
-            ...state,
-            loading: false,
-            hasErrors: true
-        };
+        case actionTypes.GET_BREEDS_FAIL:
+            return {
+                ...state,
+                loading: false,
+                hasErrors: true
+            };
+        default:
+            return state;
     }
-    return state;
 };
 
 export default reducer;
