@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Logo from '../../components/Logo/Logo';
 import TextComponent from '../../components/Text/Text';
 import MenuCard from '../../components/MenuCard/MenuCard';
@@ -7,8 +7,7 @@ import classes from './MainMenu.css';
 
 function MainMenu() {
     return (
-        <Fragment>
-            <div className={classes.MainContainer}>
+            <section className={classes.MainContainer}>
                 <div className={classes.HomeBlock}>
                     <Logo />
                     <TextComponent
@@ -22,9 +21,7 @@ function MainMenu() {
                         <MenuCard type={'images-search'} buttonTitle={'Gallery'} />
                     </div>
                 </div>
-            </div>
-            
-        </Fragment>
+            </section>
     )
 }
 
