@@ -30,15 +30,14 @@ const menuCard = (props) => {
     }
     return (
         <div className={classes.MenuCard}>
-            <div className={classes[imgClass]}>
+            <div className={classes[imgClass] + ' ' + classes.ImageCard}>
                 <img src={menuImgs[props.type]} alt={props.type}/>
             </div>
             <NavLink 
                 to={'/' + props.type} 
                 className={classes.Button}
-                activeClassName={classes.ButtonActive}>
-            {/* <button>{props.buttonTitle}</button> */}
-            {props.buttonTitle}
+                activeClassName={classes.ButtonActive} >
+                {props.buttonTitle}
             </NavLink>
         </div>
     )

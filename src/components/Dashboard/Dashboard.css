@@ -1,0 +1,21 @@
+.Search {
+    display: flex;
+}
+
+.SearchForm {
+    width: 70%;
+}
+
+.Buttons {
+    width: 30%;
+}
+
+.SearchButtonImg {
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+}
+
+.SearchButtonImg:active {
+    color: white;
+}
