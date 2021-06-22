@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-// import axios from '../../axios-breeds';
+import axios from '../../axios-breeds';
 
 export const getBreeds = () => ({
     type: actionTypes.GET_BREEDS
@@ -17,18 +17,15 @@ export const getBreedsFail = () => ({
 export function fetchBreeds() {
     return async (dispatch) => {
         dispatch(getBreeds())
-
         try {
-            const response = await fetch('https://api.thedogapi.com/v1/breeds', {
-            method: "GET",
-            headers: {
-                'x-api-key': 'ea813eea-67f0-44d1-b617-28a0b6323e7e'
-            }
-        });
-            const data = await response.json();
-            console.log(data);
+            const response = await axios.get('https://api.thedogapi.com/v1/breeds', {
+                        headers: {
+                            'x-api-key': 'ea813eea-67f0-44d1-b617-28a0b6323e7e'
+                        }
+                    })
+                    console.log(response);
 
-            dispatch(getBreedsSuccess(data));
+            dispatch(getBreedsSuccess(response.data));
         } catch (error) {
             dispatch(getBreedsFail());
         }
